@@ -10,16 +10,95 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <button id="openButton">Show Text</button>
+  <!-- The ATM Main Container -->
+     <div class="atmMainContainer">
+
+
+    <!-- The ATM Header -->
+        <div class="headerContainer">
+
+          <!-- The ATM Name  -->
+           <div class="atmName">ATM</div>
+
+          <!-- The date -->
+           <div class="todayDate"></div>
+
+          <!-- The Time -->
+           <div class="currentTime"></div>
+        </div>
+
+
+        
+
+    <!-- The ATM Middle Container -->
+        <div class="atmMiddleContainer">
+
+              <!-- The ATM User Tools -->
+              <div class="atmButtons">
+                <button class="atmBTN1 btnCSS">Quick Withdrawal</button>
+                <button class="atmBTN2 btnCSS">Cash transactions</button>
+                <button class="atmBTN3 btnCSS">Balance Statement</button>
+                <button class="atmBTN4 btnCSS">Payments</button>
+                <button class="atmBTN5 btnCSS">Online-Banking</button>
+                <button class="atmBTN6 btnCSS">Other services</button>
+              </div>
+
+        </div>
+
+        <!-- The ATM footer Container -->
+        <div class="atmFooter"></div>
+
+     </div>
+
+  <!-- The NumPad -->
+  <div class="calNumPadContainer">
+
+    <!-- Numbers and operators buttons -->
+     
+     
+     
+     <button class="calNumPad key5 num7" onclick="updateCalculation('7')">7</button>
+     <button class="calNumPad key6 num8" onclick="updateCalculation('8')">8</button>
+     <button class="calNumPad key7 num9" onclick="updateCalculation('9')">9</button>
+     
+
+     <button class="calNumPad key9 num4" onclick="updateCalculation('4')">4</button>
+     <button class="calNumPad key10 num5" onclick="updateCalculation('5')">5</button>
+     <button class="calNumPad key11 num6" onclick="updateCalculation('6')">6</button>
+     
+     <button class="calNumPad key13 num1" onclick="updateCalculation('1')">1</button>
+     <button class="calNumPad key14 num2" onclick="updateCalculation('2')">2</button>
+     <button class="calNumPad key15 num3" onclick="updateCalculation('3')">3</button>
+     
+
+     <button class="calNumPad key17 cancelBtn" onclick="updateCalculation('C')">Cancel</button>
+     <button class="calNumPad key18 num0" onclick="updateCalculation('0')">0</button>
+     <button class="calNumPad key19 enterBtn" onclick="updateCalculation('.')">Enter</button>
+     
+     <!-- eval is a JavaScript Function to evaluate the string  -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <button id="openButton">Show Text</button> -->
 
   <!-- Overlay -->
-  <div class="overlay" id="overlay"></div>
+  <!-- <div class="overlay" id="overlay"></div> -->
 
   <!-- Modal -->
-  <div class="modal" id="modal">
+  <!-- <div class="modal" id="modal">
     <p>This is the text displayed in the small window!</p>
     <button id="closeButton">Close</button>
-  </div>
+  </div> -->
 
     <script src="app.js" async defer></script>
   </body>
