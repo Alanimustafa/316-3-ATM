@@ -1,5 +1,5 @@
 body {
-  display: flex;
+  display: block;
   background-color: #333f3c;
   margin: auto;
   background-image: url(https://img.freepik.com/premium-vector/atm-cash-withdrawal-line-connection-low-poly-wireframe-design-abstract-geometric-background_42421-1318.jpg);
@@ -11,10 +11,10 @@ body {
 .atmMainContainer {
   border: double lightblue 12px;
   width: 2024px;
-  height: 1000px;
+  height: 900px;
   justify-self: center;
   align-self: center;
-  margin-top: 10%;
+  margin-top: 3em;
   background-image: url(https://img.freepik.com/premium-vector/atm-cash-withdrawal-line-connection-low-poly-wireframe-design-abstract-geometric-background_42421-1318.jpg);
   background-size: cover;
   background-blend-mode:luminosity;
@@ -103,7 +103,7 @@ body {
   height: 240px;
   justify-self: center;
   align-self: flex-end;
-  margin-top: 5px;
+  margin-top: 25px;
   padding: 30px;
   background-image: url(https://img.freepik.com/premium-vector/atm-cash-withdrawal-line-connection-low-poly-wireframe-design-abstract-geometric-background_42421-1318.jpg);
   background-size: cover;
@@ -113,6 +113,7 @@ body {
 }
 
 .calNumPad {
+  display: inline;
   width: 90px;;
   height: 55px;
   border: solid rgb(150, 140, 140) 1px;
@@ -125,6 +126,7 @@ body {
   border-radius: 10px;
   background-color: silver;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 
 .calNumPad:hover {
