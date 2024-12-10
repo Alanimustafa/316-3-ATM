@@ -10,8 +10,8 @@ body {
 
 .atmMainContainer {
   border: double lightblue 12px;
-  width: 1024px;
-  height: 768px;
+  width: 2024px;
+  height: 1000px;
   justify-self: center;
   align-self: center;
   margin-top: 10%;
@@ -43,18 +43,37 @@ body {
   height: 70%;
   justify-self: center;
   margin-top: 2px;
-  justify-content: space-around;
+  border: solid lightblue 5px;
+  justify-content: center;
+  justify-content: space-between;
+
 }
 
 
-.atmButtons {
+.atmButtons1,
+.atmButtons2   {
   display: flex;
-  justify-content: space-between;
-  width: auto;
+  justify-content: space-around;
+  width: 22%;
   height: auto;
   flex-wrap: wrap;
   align-content:space-between;
+  flex-direction: column;
+}
 
+.mainScreen {
+  border: solid orange 4px;
+  background-image: url(https://img.freepik.com/premium-vector/atm-cash-withdrawal-line-connection-low-poly-wireframe-design-abstract-geometric-background_42421-1318.jpg);  
+  background-size: cover;
+  width: 53%;;
+  height: 48vh;
+  margin: auto;
+}
+
+.mainScreenText {
+  color: white;
+  text-align: center;
+  font-size: 90px;
 }
 .btnCSS {
   font-size: 45px;
@@ -63,9 +82,9 @@ body {
   border: solid white 5px;
   background-image: url(https://img.freepik.com/premium-vector/atm-cash-withdrawal-line-connection-low-poly-wireframe-design-abstract-geometric-background_42421-1318.jpg);
   color: white;
-  
   cursor: pointer;
 }
+
 
 .btnCSS:hover {
   font-size: 45px;
