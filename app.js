@@ -23,19 +23,53 @@ document.querySelector('.currentTime').textContent = `${getCurrentTime()}`;
 let mainScreen = document.querySelector('.mainScreen');
 let theScreen = document.querySelector('.mainScreenText');
 
-// Enter pin Function
-function enterPinNumber () {
 
+function theNumPad () {
+  
 }
 
 
+// Enter pin Function
+function enterPinNumber () {
+  const thePinNumber = document.createElement ('input');
+  const pinSubmit = document.createElement('button');
+  
+  thePinNumber.setAttribute("class", "mainScreenText");
+  pinSubmit.setAttribute("class", "btnCSS");
+
+  thePinNumber.placeholder= "Enter PIN";
+  thePinNumber.type="text";
+  thePinNumber.style.background ="none";
+  thePinNumber.style.marginTop ="1em";
+  thePinNumber.style.border ="solid lightbule 2px";
+  pinSubmit.textContent = "Confirme";
+  pinSubmit.style.margin = "1em";
+  theScreen.append(thePinNumber);
+  mainScreen.append(pinSubmit);
+
+
+  pinSubmit.addEventListener('click', () => {
+    thePinNumber.style.display = "none";
+    pinSubmit.style.display = "none";
+    
+  });
+
+
+  
+
+}
+enterPinNumber();
+
 // Quick Withdrawal Functoin
 function withDrawal () {
-  
-  // The Function Variables.
+
+
+    // The Function Variables.
     const functionLabel = document.querySelector('.mainScreenText');
     const enterAmount = document.createElement('input');
     const submitButton = document.createElement('button');
+
+
 
   // Assigning the Classes to the Divs
     functionLabel.textContent = "Quick Withdrawal";
@@ -91,6 +125,11 @@ function withDrawal () {
 
 // Cash Transactions Function
 function cashTransaction () {
+  const cashTRANS = document.createElement('img');
+  cashTRANS.setAttribute('class', "imgClass");
+  cashTRANS.style.backgroundImage = 'url("https://media.cheggcdn.com/media/c4f/c4f5cf23-2f90-4f7b-be71-d6ba5dc5144a/phpujMeC2")';
+
+  theScreen.append(cashTRANS);
 
 }
 
@@ -115,37 +154,9 @@ function onlineBanking () {
 
 // other Services Function
 function otherServices () {
-
-}
-
-
-
-
+    
+          //theScreen.innerHTML = "Thank you!";
+          window.location.reload;
+        }
 
 
-
-
-
-
-
-// const openButton = document.getElementById('openButton');
-// const closeButton = document.getElementById('closeButton');
-// const modal = document.getElementById('modal');
-// const overlay = document.getElementById('overlay');
-
-// // Function to open the modal
-// function openModal() {
-//   modal.style.display = 'block';
-//   overlay.style.display = 'block';
-// }
-
-// // Function to close the modal
-// function closeModal() {
-//   modal.style.display = 'none';
-//   overlay.style.display = 'none';
-// }
-
-// // Add event listeners
-// openButton.addEventListener('click', openModal);
-// closeButton.addEventListener('click', closeModal);
-// overlay.addEventListener('click', closeModal);
