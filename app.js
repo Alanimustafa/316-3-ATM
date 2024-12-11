@@ -19,20 +19,33 @@ document.querySelector('.currentTime').textContent = `${getCurrentTime()}`;
 
 //-------------------------------------------------------------------------------
 
+
+const addToScreen = (info) => {
+  theScreen.append(info)
+}
+const theValue = (evt) =>{
+  addToScreen(evt.target.textContent)
+}
+
+
+
+
 // Links to the ATM html elements
 let mainScreen = document.querySelector('.mainScreen');
 let theScreen = document.querySelector('.mainScreenText');
 
 
 function theNumPad () {
-  
+
 }
 
 
 // Enter pin Function
 function enterPinNumber () {
-  const thePinNumber = document.createElement ('input');
-  const pinSubmit = document.createElement('button');
+
+  
+  let thePinNumber = document.createElement ('input');
+  let pinSubmit = document.createElement('button');
   
   thePinNumber.setAttribute("class", "mainScreenText");
   pinSubmit.setAttribute("class", "btnCSS");
@@ -83,7 +96,7 @@ function withDrawal () {
       
       
       // Function when a submit button click.
-      function imClicked () {
+      () => {
         submitButton.style.display = "none";
         
         const theReport = document.createElement ('div');
@@ -126,17 +139,31 @@ function withDrawal () {
 // Cash Transactions Function
 function cashTransaction () {
   const cashTRANS = document.createElement('img');
+  const cashTRANSBtn = document.createElement('button');
+
   cashTRANS.setAttribute('class', "imgClass");
+
   cashTRANS.style.backgroundImage = 'url("https://media.cheggcdn.com/media/c4f/c4f5cf23-2f90-4f7b-be71-d6ba5dc5144a/phpujMeC2")';
 
+
+  
   theScreen.append(cashTRANS);
+  
+
+  
 
 }
 
 
 // Balance Statement Function
 function balanceStatement () {
+  const balanceText = document.createElement('div');
+  balanceText.setAttribute("class", "mainScreenText");
+  balanceText.textContent = "Your current balance is $1,234";
+  balanceText.style.fontSize = "40px"
+  balanceText.style.marginTop= "150px"
 
+  theScreen.append(balanceText);
 }
 
 
