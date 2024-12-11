@@ -57,6 +57,64 @@ function enterPinNumber () {
   thePinNumber.style.border ="solid lightbule 2px";
   pinSubmit.textContent = "Confirme";
   pinSubmit.style.margin = "1em";
+
+
+  const num0 = document.getElementById("number0");
+  num0.addEventListener('click', ()=> {
+    thePinNumber.value += num0.innerText;
+  })
+
+  const num1 = document.getElementById("number1");
+  num1.addEventListener('click', ()=> {
+    thePinNumber.value += num1.innerText;
+  })
+
+  const num2 = document.getElementById("number2");
+  num2.addEventListener('click', ()=> {
+    thePinNumber.value += num2.innerText;
+  })
+
+  const num3 = document.getElementById("number3");
+  num3.addEventListener('click', ()=> {
+    thePinNumber.value += num3.innerText;
+  })
+
+  const num4 = document.getElementById("number4");
+  num4.addEventListener('click', ()=> {
+    thePinNumber.value += num4.innerText;
+  })
+
+  const num5 = document.getElementById("number5");
+  num5.addEventListener('click', ()=> {
+    thePinNumber.value += num5.innerText;
+  })
+
+  const num6 = document.getElementById("number6");
+  num6.addEventListener('click', ()=> {
+    thePinNumber.value += num6.innerText;
+  })
+
+  const num7 = document.getElementById("number7");
+  num7.addEventListener('click', ()=> {
+    thePinNumber.value += num7.innerText;
+  })
+
+  const num8 = document.getElementById("number8");
+  num8.addEventListener('click', ()=> {
+    thePinNumber.value += num8.innerText;
+  })
+
+  const num9 = document.getElementById("number9");
+  num9.addEventListener('click', ()=> {
+    thePinNumber.value += num9.innerText;
+  })
+
+
+
+
+
+
+
   theScreen.append(thePinNumber);
   mainScreen.append(pinSubmit);
 
@@ -130,6 +188,61 @@ function withDrawal () {
     enterAmount.style.border ="solid lightbule 2px";
 
     
+
+    const num0 = document.getElementById("number0");
+    num0.addEventListener('click', ()=> {
+      enterAmount.value += num0.innerText;
+    })
+  
+    const num1 = document.getElementById("number1");
+    num1.addEventListener('click', ()=> {
+      enterAmount.value += num1.innerText;
+    })
+  
+    const num2 = document.getElementById("number2");
+    num2.addEventListener('click', ()=> {
+      enterAmount.value += num2.innerText;
+    })
+  
+    const num3 = document.getElementById("number3");
+    num3.addEventListener('click', ()=> {
+      enterAmount.value += num3.innerText;
+    })
+  
+    const num4 = document.getElementById("number4");
+    num4.addEventListener('click', ()=> {
+      enterAmount.value += num4.innerText;
+    })
+  
+    const num5 = document.getElementById("number5");
+    num5.addEventListener('click', ()=> {
+      enterAmount.value += num5.innerText;
+    })
+  
+    const num6 = document.getElementById("number6");
+    num6.addEventListener('click', ()=> {
+      enterAmount.value += num6.innerText;
+    })
+  
+    const num7 = document.getElementById("number7");
+    num7.addEventListener('click', ()=> {
+      enterAmount.value += num7.innerText;
+    })
+  
+    const num8 = document.getElementById("number8");
+    num8.addEventListener('click', ()=> {
+      enterAmount.value += num8.innerText;
+    })
+  
+    const num9 = document.getElementById("number9");
+    num9.addEventListener('click', ()=> {
+      enterAmount.value += num9.innerText;
+    })
+
+
+
+
+
     theScreen.append(enterAmount);
     mainScreen.append(submitButton);
 
