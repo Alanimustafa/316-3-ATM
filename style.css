@@ -72,8 +72,14 @@ body {
 
 .mainScreenText {
   color: white;
+  border: solid green 2px;
   text-align: center;
+  justify-self: center;
   font-size: 90px;
+  max-width: 98%;;
+  max-height: 98%;
+  flex-wrap: wrap;
+  margin-top: 5px;;
 }
 .btnCSS {
   font-size: 45px;
