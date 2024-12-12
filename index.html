@@ -36,14 +36,14 @@
               <!-- The ATM Left Buttons -->
               <div class="atmButtons1">
                 <button class="atmBTN1 btnCSS" onclick="withDrawal()">Quick Withdrawal</button>
-                <button class="atmBTN2 btnCSS" onclick="cashTransaction()">Cash transactions</button>
+                <button class="atmBTN2 btnCSS"  onclick="cashTransaction()">Cash transactions</button>
                 <button class="atmBTN3 btnCSS" onclick="balanceStatement ()">Balance Statement</button>
               </div>
 
               <!-- The main Screen -->
                <div class="mainScreen">
 
-                <section class="mainScreenText">Welcome!
+                <section class="mainScreenText">
                 
                 </section>
                 
@@ -51,8 +51,8 @@
 
               <!-- The ATM Right Buttons -->
               <div class="atmButtons2">
-                <button class="atmBTN4 btnCSS" onclick="payments ()">Payments</button>
-                <button class="atmBTN5 btnCSS" onclick="onlineBanking ()">Online-Banking</button>
+                <button class="atmBTN4 btnCSS" onclick="payments()">Payments</button>
+                <button class="atmBTN5 btnCSS" onclick="atmHelp()">Need Help!</button>
                 <button class="atmBTN6 btnCSS" onclick="window.location.reload()">HOME</button>
               </div>
 
@@ -78,7 +78,7 @@
      <button class="calNumPad key15 num3" id="number3">3</button>
      <button class="calNumPad key17 cancelBtn" onclick="window.location.reload()">Cancel</button>
      <button class="calNumPad key18 num0" id="number0">0</button>
-     <button class="calNumPad key19 enterBtn" onclick="balanceStatement ()">Enter</button>
+     <button class="calNumPad key19 enterBtn" id="enterKey">Enter</button>
   </div>
 
 
