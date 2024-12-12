@@ -20,12 +20,12 @@ document.querySelector('.currentTime').textContent = `${getCurrentTime()}`;
 //-------------------------------------------------------------------------------
 
 
-    const addToScreen = (info) => {
-      theScreen.append(info)
-    }
-    const theValue = (evt) =>{
-      addToScreen(evt.target.textContent)
-    }
+    // const addToScreen = (info) => {
+    //   theScreen.append(info)
+    // }
+    // const theValue = (evt) =>{
+    //   addToScreen(evt.target.textContent)
+    // }
 
 
 
@@ -35,12 +35,8 @@ document.querySelector('.currentTime').textContent = `${getCurrentTime()}`;
     let theScreen = document.querySelector('.mainScreenText');
 
 
-function theNumPad () {
-
-}
-
-
-// Enter pin Function
+    
+    // Enter pin Function
     function enterPinNumber () {
 
       
@@ -54,9 +50,13 @@ function theNumPad () {
       thePinNumber.type="password";
       thePinNumber.minLength = 4;
       thePinNumber.maxLength = 6;
+      thePinNumber.required =true ;
       thePinNumber.style.background ="none";
       thePinNumber.style.marginTop ="1em";
       thePinNumber.style.border ="solid lightbule 2px";
+
+
+
       pinSubmit.textContent = "Confirme";
       pinSubmit.style.margin = "1em";
       pinSubmit.style.width = "40%";
@@ -64,62 +64,90 @@ function theNumPad () {
 
 
     // Activating the Number Pad 
-      const num0 = document.getElementById("number0");
-      num0.addEventListener('click', ()=> {
-        thePinNumber.value += num0.innerText;
-      })
+    const num0 = document.getElementById("number0");
+    num0.addEventListener('click', ()=> {
+      thePinNumber.value += num0.innerText;
+    })
 
-      const num1 = document.getElementById("number1");
-      num1.addEventListener('click', ()=> {
-        thePinNumber.value += num1.innerText;
-      })
+    const num1 = document.getElementById("number1");
+    num1.addEventListener('click', ()=> {
+      thePinNumber.value += num1.innerText;
+    })
 
-      const num2 = document.getElementById("number2");
-      num2.addEventListener('click', ()=> {
-        thePinNumber.value += num2.innerText;
-      })
+    const num2 = document.getElementById("number2");
+    num2.addEventListener('click', ()=> {
+      thePinNumber.value += num2.innerText;
+    })
 
-      const num3 = document.getElementById("number3");
-      num3.addEventListener('click', ()=> {
-        thePinNumber.value += num3.innerText;
-      })
+    const num3 = document.getElementById("number3");
+    num3.addEventListener('click', ()=> {
+      thePinNumber.value += num3.innerText;
+    })
 
-      const num4 = document.getElementById("number4");
-      num4.addEventListener('click', ()=> {
-        thePinNumber.value += num4.innerText;
-      })
+    const num4 = document.getElementById("number4");
+    num4.addEventListener('click', ()=> {
+      thePinNumber.value += num4.innerText;
+    })
 
-      const num5 = document.getElementById("number5");
-      num5.addEventListener('click', ()=> {
-        thePinNumber.value += num5.innerText;
-      })
+    const num5 = document.getElementById("number5");
+    num5.addEventListener('click', ()=> {
+      thePinNumber.value += num5.innerText;
+    })
 
-      const num6 = document.getElementById("number6");
-      num6.addEventListener('click', ()=> {
-        thePinNumber.value += num6.innerText;
-      })
+    const num6 = document.getElementById("number6");
+    num6.addEventListener('click', ()=> {
+      thePinNumber.value += num6.innerText;
+    })
 
-      const num7 = document.getElementById("number7");
-      num7.addEventListener('click', ()=> {
-        thePinNumber.value += num7.innerText;
-      })
+    const num7 = document.getElementById("number7");
+    num7.addEventListener('click', ()=> {
+      thePinNumber.value += num7.innerText;
+    })
 
-      const num8 = document.getElementById("number8");
-      num8.addEventListener('click', ()=> {
-        thePinNumber.value += num8.innerText;
-      })
+    const num8 = document.getElementById("number8");
+    num8.addEventListener('click', ()=> {
+      thePinNumber.value += num8.innerText;
+    })
 
-      const num9 = document.getElementById("number9");
-      num9.addEventListener('click', ()=> {
-        thePinNumber.value += num9.innerText;
-      })
+    const num9 = document.getElementById("number9");
+    num9.addEventListener('click', ()=> {
+      thePinNumber.value += num9.innerText;
+    })
 
 
-      const enterKey = document.getElementById("enterKey")
-      enterKey.addEventListener("click", () => {
+    const enterKey = document.getElementById("enterKey")
+    enterKey.addEventListener("click", (event) => {
+
+      event.preventDefault();
+
+      if (thePinNumber.checkValidity()) {
+        //alert('PIN submitted successfully!');
+
         thePinNumber.style.display = "none";
-        pinSubmit.style.display = "none";        
-      })
+        pinSubmit.style.display = "none";    
+
+        } else {
+            alert('Please enter a valid PIN (4-6 characters).');
+        }
+    })
+
+
+
+
+      thePinNumber.addEventListener('input', function () {
+        const value = thePinNumber.value;
+        if (value.length < 4) {
+            thePinNumber.setCustomValidity('PIN must be at least 4 characters long.');
+        } else if (value.length > 6) {
+            thePinNumber.setCustomValidity('PIN must not exceed 6 characters.');
+        } else {
+            thePinNumber.setCustomValidity(''); // Clear validation message
+        }
+    });
+
+
+      
+
 
     //Appending the values to the input screen.
       theScreen.append(thePinNumber);
@@ -128,13 +156,15 @@ function theNumPad () {
       mainScreen.append(pinSubmit);
 
 
-      pinSubmit.addEventListener('click', () => {
-        thePinNumber.style.display = "none";
-        pinSubmit.style.display = "none";
+      pinSubmit.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (thePinNumber.checkValidity()) {
+           thePinNumber.style.display = "none";
+           pinSubmit.style.display = "none";
+        } else {
+          alert('Please enter a valid PIN (4-6 characters).');
+        }
       });
-
-    
-      
 
     }
     enterPinNumber();
@@ -145,7 +175,17 @@ function theNumPad () {
 
         // The Function Variables.
         const functionLabel = document.querySelector('.mainScreenText');
+
         const enterAmount = document.createElement('input');
+        enterAmount.type="Number";
+        enterAmount.pattern = "[0-9]";
+        enterAmount.maxLength = "4";
+        enterAmount.placeholder="$0.00";
+        enterAmount.defaultValue = "$ ";
+        enterAmount.style.background ="none";
+        enterAmount.style.marginTop ="1em";
+        enterAmount.style.border ="solid lightbule 2px";
+
         const submitButton = document.createElement('button');
         
     // The Five Dollar Withdrawal
@@ -249,12 +289,12 @@ function theNumPad () {
         })
         mainScreen.append(twentyDollar);
 
-      // Assigning the Classes to the Divs
+    // Assigning the Classes to the Divs
         functionLabel.textContent = "Quick Withdrawal";
         enterAmount.setAttribute("class", "mainScreenText");
         submitButton.setAttribute("class", "btnCSS");
 
-      // The Submit Button
+    // The Submit Button
         submitButton.textContent = "Confirme"
         submitButton.style.margin = "1em"
         submitButton.style.width = "40%";
@@ -288,13 +328,6 @@ function theNumPad () {
         )
 
       // The Input field
-        enterAmount.type="number";
-        enterAmount.maxLength = 4;
-        enterAmount.placeholder="$0.00";
-        enterAmount.defaultValue = "$ ";
-        enterAmount.style.background ="none";
-        enterAmount.style.marginTop ="1em";
-        enterAmount.style.border ="solid lightbule 2px";
         
         
 
