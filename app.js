@@ -49,9 +49,11 @@ function theNumPad () {
       
       thePinNumber.setAttribute("class", "mainScreenText");
       pinSubmit.setAttribute("class", "btnCSS");
-
+      
       thePinNumber.placeholder= "Enter PIN";
-      thePinNumber.type="text";
+      thePinNumber.type="password";
+      thePinNumber.minLength = 4;
+      thePinNumber.maxLength = 6;
       thePinNumber.style.background ="none";
       thePinNumber.style.marginTop ="1em";
       thePinNumber.style.border ="solid lightbule 2px";
@@ -145,8 +147,107 @@ function theNumPad () {
         const functionLabel = document.querySelector('.mainScreenText');
         const enterAmount = document.createElement('input');
         const submitButton = document.createElement('button');
+        
+    // The Five Dollar Withdrawal
+        const fiveDollar = document.createElement('button');
+        fiveDollar.setAttribute('class', 'btnCSS');
+        fiveDollar.textContent = "$5";
+        fiveDollar.style.width = "33%";
+        fiveDollar.margin = "20px";
+        fiveDollar.addEventListener ('click', () => {
+                submitButton.style.display = "none";
+                fiveDollar.style.display="none";
+                tenDollar.style.display="none";
+                twentyDollar.style.display="none";
+      
+
+                const theReport = document.createElement ('div');
+                const goHomeButton = document.createElement ('button');
+                goHomeButton.setAttribute("class", "btnCSS");
+                goHomeButton.textContent = "Home";
+                goHomeButton.style.marginLeft = "100px;"
+                goHomeButton.style.marginTop = "90px"
+                goHomeButton.addEventListener('click', () => {
+                  theScreen.innerHTML = "Thank you!";
+                })
 
 
+                theReport.setAttribute("class", "mainScreenText");
+                theReport.style.fontSize = "30px";
+                theReport.textContent = fiveDollar.value + " - has been withdrawaled.";
+                theReport.style.marginTop = "1em";
+                theScreen.append(theReport);
+                theScreen.append(goHomeButton);
+              })
+            mainScreen.append(fiveDollar);
+
+      // The Ten Dollar Withdrawal
+        const tenDollar = document.createElement('button');
+        tenDollar.setAttribute('class', 'btnCSS');
+        tenDollar.textContent= "$10";
+        tenDollar.style.width = "33%";
+        tenDollar.addEventListener('click', () => {
+
+          submitButton.style.display = "none";
+          fiveDollar.style.display="none";
+          tenDollar.style.display="none";
+          twentyDollar.style.display="none";
+
+          
+
+          const theReport = document.createElement ('div');
+          const goHomeButton = document.createElement ('button');
+          goHomeButton.setAttribute("class", "btnCSS");
+          goHomeButton.textContent = "Home";
+          goHomeButton.style.marginLeft = "100px;"
+          goHomeButton.style.marginTop = "90px"
+          goHomeButton.addEventListener('click', () => {
+            theScreen.innerHTML = "Thank you!";
+          })
+
+
+          theReport.setAttribute("class", "mainScreenText");
+          theReport.style.fontSize = "30px";
+          theReport.textContent = enterAmount.value + " - has been withdrawaled.";
+          theReport.style.marginTop = "1em";
+          theScreen.append(theReport);
+          theScreen.append(goHomeButton);
+         
+        })
+        mainScreen.append(tenDollar);
+
+      // The Twenty Dollar Withdrawal
+        const twentyDollar = document.createElement('button');
+        twentyDollar.setAttribute('class', 'btnCSS');
+        twentyDollar.textContent = "$20";
+        twentyDollar.style.width = "33%";
+        twentyDollar.addEventListener ('click', () => {
+          submitButton.style.display = "none";
+          fiveDollar.style.display="none";
+          tenDollar.style.display="none";
+          twentyDollar.style.display="none";
+
+          const theReport = document.createElement ('div');
+          const goHomeButton = document.createElement ('button');
+          goHomeButton.setAttribute("class", "btnCSS");
+          goHomeButton.textContent = "Home";
+          goHomeButton.style.marginLeft = "100px;"
+          goHomeButton.style.marginTop = "90px"
+          goHomeButton.addEventListener('click', () => {
+            theScreen.innerHTML = "Thank you!";
+          })
+
+
+          theReport.setAttribute("class", "mainScreenText");
+          theReport.style.fontSize = "30px";
+          theReport.textContent = enterAmount.value + " - has been withdrawaled.";
+          theReport.style.marginTop = "1em";
+          theScreen.append(theReport);
+          theScreen.append(goHomeButton);
+          
+          
+        })
+        mainScreen.append(twentyDollar);
 
       // Assigning the Classes to the Divs
         functionLabel.textContent = "Quick Withdrawal";
@@ -159,7 +260,10 @@ function theNumPad () {
         submitButton.style.width = "40%";
         submitButton.addEventListener('click', () => {
             submitButton.style.display = "none";
-            
+            fiveDollar.style.display="none";
+            tenDollar.style.display="none";
+            twentyDollar.style.display="none";
+  
 
             const theReport = document.createElement ('div');
             const goHomeButton = document.createElement ('button');
@@ -184,12 +288,15 @@ function theNumPad () {
         )
 
       // The Input field
-        enterAmount.type="text";
+        enterAmount.type="number";
+        enterAmount.maxLength = 4;
         enterAmount.placeholder="$0.00";
         enterAmount.defaultValue = "$ ";
         enterAmount.style.background ="none";
         enterAmount.style.marginTop ="1em";
         enterAmount.style.border ="solid lightbule 2px";
+        
+        
 
         
 

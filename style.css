@@ -63,6 +63,7 @@ body {
 }
 
 .mainScreen {
+  display: inline;
   border: solid orange 4px;
   background-image: url(https://img.freepik.com/premium-vector/atm-cash-withdrawal-line-connection-low-poly-wireframe-design-abstract-geometric-background_42421-1318.jpg);  
   background-size: cover;
