@@ -20,14 +20,6 @@ document.querySelector('.currentTime').textContent = `${getCurrentTime()}`;
 //-------------------------------------------------------------------------------
 
 
-    // const addToScreen = (info) => {
-    //   theScreen.append(info)
-    // }
-    // const theValue = (evt) =>{
-    //   addToScreen(evt.target.textContent)
-    // }
-
-
 
 
 // Links to the ATM html elements
@@ -447,7 +439,7 @@ document.querySelector('.currentTime').textContent = `${getCurrentTime()}`;
 
       const paymentImg = document.createElement('img');
       paymentImg.setAttribute("class", "paymentImg");
-      paymentImg.style.backgroundImage = 'url("https://media.tenor.com/amJXxb_H62oAAAAM/baboon-office.gif")';
+      paymentImg.style.backgroundImage = 'url("https://www.pewresearch.org/wp-content/uploads/sites/3/legacy/313-interior.gif")';
       paymentImg.style.backgroundSize = "cover";
       paymentImg.style.width = "99%";
       paymentImg.style.height = "80%";
